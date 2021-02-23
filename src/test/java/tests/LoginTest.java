@@ -28,7 +28,7 @@ public class LoginTest extends BaseTest {
 		ap.FillCustomerPassword(Utils.readProperty("password"));
 		ap.clickLogin();
 		MyAccount ma = new MyAccount(driver);
-		//verify the user has been logged in successfully
+		//verify the user has been logged in successfully!
 		Assert.assertEquals(ma.getMyAccountHeader(), "MY ACCOUNT");
 		System.out.println("*******END LOGIN****************");
 	}
