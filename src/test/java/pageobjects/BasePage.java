@@ -6,6 +6,7 @@ import java.util.Random;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -111,6 +112,12 @@ public class BasePage {
         // return the resultant string 
         return r.toString(); 
     }
+	
+	public void MouseHover(WebElement el)
+	{
+		Actions actions = new Actions(driver);
+		actions.moveToElement(el).perform();
+	}
 
 	/*
 	 * Call this method with your element and a color like (red,green,orange etc...)

@@ -8,16 +8,9 @@ import io.qameta.allure.Step;
 
 public class MainPage extends BasePage {
 	
-	@FindBy(css = ".login")
-	WebElement signIn;
 	
 	public MainPage(WebDriver driver) {
 		super(driver);
 	}
 
-	@Step("Click on Sign in")
-	public void clickSignIn()
-	{
-		click(signIn);
-	}
 }

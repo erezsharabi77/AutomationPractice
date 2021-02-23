@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import io.qameta.allure.Description;
 import pageobjects.AuthenticationPage;
 import pageobjects.MainPage;
+import pageobjects.MenuPage;
 import pageobjects.MyAccount;
 import utils.Utils;
 
@@ -20,7 +21,7 @@ public class SignInTest extends BaseTest {
 	{
 		System.out.println("SignIn Test Begins");
 		System.out.println("*******START SIGNIN****************");
-		MainPage mp = new MainPage(driver);
+		MenuPage mp = new MenuPage(driver);
 		mp.clickSignIn();
 		AuthenticationPage ap = new AuthenticationPage(driver);
 		String randomEmail = ap.getAlphaNumericString(7);

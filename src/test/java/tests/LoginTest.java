@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import io.qameta.allure.Description;
 import pageobjects.AuthenticationPage;
 import pageobjects.MainPage;
+import pageobjects.MenuPage;
 import pageobjects.MyAccount;
 import utils.Utils;
 
@@ -20,7 +21,7 @@ public class LoginTest extends BaseTest {
 	{
 		System.out.println("Login Test Begins");
 		System.out.println("*******START LOGIN****************");
-		MainPage mp = new MainPage(driver);
+		MenuPage mp = new MenuPage(driver);
 		mp.clickSignIn();
 		AuthenticationPage ap = new AuthenticationPage(driver);
 		//Fill email address and password to login
@@ -28,7 +29,7 @@ public class LoginTest extends BaseTest {
 		ap.FillCustomerPassword(Utils.readProperty("password"));
 		ap.clickLogin();
 		MyAccount ma = new MyAccount(driver);
-		//verify the user has been logged in successfully!
+		//verify the user has been logged in successfully
 		Assert.assertEquals(ma.getMyAccountHeader(), "MY ACCOUNT");
 		System.out.println("*******END LOGIN****************");
 	}
