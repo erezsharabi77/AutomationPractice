@@ -30,12 +30,12 @@ public class BaseTest {
 	@AfterClass
 	public void tearDown() {
 		System.out.println("The flow is completed");
-//		try {
-//			Thread.sleep(20000);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-		//driver.quit();
+		try {
+			Thread.sleep(400);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		driver.quit();
 	}
 
 

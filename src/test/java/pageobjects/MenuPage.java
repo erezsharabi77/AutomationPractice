@@ -36,7 +36,8 @@ public class MenuPage extends BasePage {
 	@FindBy(css = "[name='submit_search']")
 	WebElement searchBtn;
 	
-	
+	@FindBy(css = "[title='Contact Us']")
+	WebElement contactUsBtn;
 		
 	
 	public MenuPage(WebDriver driver) {
@@ -92,5 +93,11 @@ public class MenuPage extends BasePage {
 	public void clickSearch()
 	{
 		click(searchBtn);
+	}
+	
+	@Step("Click on Contact Us button")
+	public void clickContactUs()
+	{
+		click(contactUsBtn);
 	}
 }
