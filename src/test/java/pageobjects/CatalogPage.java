@@ -23,7 +23,13 @@ public class CatalogPage extends MenuPage {
 
 	@FindBy(css = "[itemprop='name'] a")
 	WebElement productName;
-
+	
+	@FindBy(css = ".addToWishlist.wishlistProd_1")
+	WebElement addToWishList;
+	
+	@FindBy(css = ".fancybox-item.fancybox-close")
+	WebElement closePopUp;
+	
 
 	public CatalogPage(WebDriver driver) {
 		super(driver);
@@ -45,10 +51,24 @@ public class CatalogPage extends MenuPage {
 		click(listView);
 	}
 	
+	@Step("Get product name from catalog page")
 	public String getProductName()
 	{
 		return getText(productName);
 	}
 
+	@Step("Add a product to the wish list")
+	public void clickOnAddToWishList()
+	{
+		click(addToWishList);
+		wait.until(ExpectedConditions.elementToBeClickable(closePopUp));
+		click(closePopUp);
+		sleep(300);
+	}
 
+//	@Step("Click on the 'x' sign confirming that the product was added to the wish list")
+//	public void clickOnCloseAddToWishListPopUP()
+//	{
+//		click(closePopUp);
+//	}
 }

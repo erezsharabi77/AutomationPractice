@@ -38,6 +38,10 @@ public class MenuPage extends BasePage {
 	
 	@FindBy(css = "[title='Contact Us']")
 	WebElement contactUsBtn;
+	
+	@FindBy(css = ".account")
+	WebElement viewCustomerAccountBtn;
+	
 		
 	
 	public MenuPage(WebDriver driver) {
@@ -99,5 +103,11 @@ public class MenuPage extends BasePage {
 	public void clickContactUs()
 	{
 		click(contactUsBtn);
+	}
+	
+	@Step("Click on view customer account")
+	public void clickViewCustomerAccount()
+	{
+		click(viewCustomerAccountBtn);
 	}
 }

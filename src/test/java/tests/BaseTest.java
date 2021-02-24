@@ -21,7 +21,7 @@ public class BaseTest {
 		cOptions.addArguments("disable-infobars");
 		driver = new ChromeDriver(cOptions);
         testContext.setAttribute("WebDriver", this.driver);
-		driver.manage().window().maximize();
+//		driver.manage().window().maximize();
 		driver.get(Utils.readProperty("url"));
 		System.out.println("BEGIN TEST SET");
 
@@ -35,7 +35,7 @@ public class BaseTest {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		driver.quit();
+//		driver.quit();
 	}
 
 
