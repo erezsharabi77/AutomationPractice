@@ -35,7 +35,7 @@ public class BaseTest {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-//		driver.quit();
+		driver.quit();
 	}
 
 
